@@ -28,6 +28,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-pantalla-estilo-comico_79603-1248.jpg?t=st=1741602155~exp=1741605755~hmac=917143480f4e564769e1a850264d07f531562e5f7dc3802a4ff22ad091ea32b4&w=1380");
+  background-size: cover;/*imagen cubre toda la pantalla*/
+  background-position: center;
+  background-attachment: fixed;/*la imagen permanece fija al hacer scroll*/
 }
 
 h1 {
