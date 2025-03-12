@@ -4,8 +4,9 @@ import styles from "./Formulario.module.css";
 function Formulario() {
   // Estado para el nombre del Pokémon, los datos de la API y los posibles errores
     const [pokemonName, setPokemonName] = useState("");//USESTATE forzar renderizado
-    const [pokemonApi, setPokemonApi] = useState(null);
+    const [pokemonApi, setPokemonApi] = useState(null);//null nos permite manejar el error
     const [error, setError] = useState("");
+    const[loading, setLoading]= useState (false)//lo ponemos false hasta que se active la carga
 
     // función que se ejecuta al enviar el formulario
     const handleSubmit = (e) => {
@@ -34,7 +35,7 @@ function Formulario() {
         setError("Por favor, ingresa el nombre de un Pokémon.");
         }
     };
-   useEffect (()=>{//cada vez que cambie el valor del input y cuando hay conicidencia pues me muestra el pokénmos sin darle yo a buscar
+    useEffect (()=>{//cada vez que cambie el valor del input y cuando hay conicidencia pues me muestra el pokénmos sin darle yo a buscar
         pokemonName && handleSubmit ()
     },[pokemonName])
 
